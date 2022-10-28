@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: prometheus-container
-    image: bitnami/prometheus:latest
+    image: ubuntu/prometheus:latest
     resources:
       limits:
         memory: "128Mi"
@@ -16,7 +16,7 @@ spec:
     ports:
       - containerPort: 9090
     volumeMounts:
-    - mountPath: /opt/bitnami/prometheus/data/
+    - mountPath: "/prometheus"
       name: prometheus-pv
 
   volumes:
