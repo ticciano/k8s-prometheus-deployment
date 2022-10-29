@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv02
+  name: pv01
 spec:
-  storageClassName: manual
+  storageClassName: standard
   capacity:
-    storage: 30Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/mnt/pv02"
+    path: "/mnt/pv01"

@@ -7,7 +7,8 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
-  storageClassName: manual
+      storage: 500M
+  #may change according to kubernetes distribution
+  storageClassName: standard
   volumeMode: Filesystem
-  volumeName: pv02
+  volumeName: pv01
