@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: svc-prometheus
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: prometheus
   ports:
   - port: 9090
+    nodePort: 30090
     
