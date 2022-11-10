@@ -36,4 +36,11 @@ scrape_configs:
       - targets: ["127.0.0.1:8081"]
     
 
+  - job_name: "cevmwebestatico"
+
+    scrape_interval: 5s
+
+    static_configs:
+      - targets: ["10.7.1.43:9100"]
+    
 
