@@ -12,7 +12,7 @@ spec:
     requests:
       storage: 10Gi
   volumeMode: Filesystem
-  volumeName: prometheus-pv
+  volumeName: prometheus
 ---
 apiVersion: apps/v1
 kind: Deployment
