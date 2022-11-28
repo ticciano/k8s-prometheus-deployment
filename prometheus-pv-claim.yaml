@@ -3,12 +3,13 @@ kind: PersistentVolumeClaim
 metadata:
   name: prometheus-pv-claim
 spec:
+  namespace: monitoring
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
-      storage: 500M
+      storage: 10Gi
   #may change according to kubernetes distribution
   storageClassName: standard
   volumeMode: Filesystem
-  volumeName: pv01
+  volumeName: prometheus-pv
