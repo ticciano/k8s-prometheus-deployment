@@ -27,7 +27,6 @@ spec:
       labels:
         app: prometheus
     spec:
-      node: cevmkubernetes1
       containers:
       - name: prometheus
         image: ubuntu/prometheus:edge
