@@ -10,7 +10,9 @@ spec:
   storageClassName: standard
   resources:
     requests:
-      storage: 2Gi
+      storage: 10Gi
+  volumeMode: Filesystem
+  volumeName: pv01
 ---
 apiVersion: apps/v1
 kind: Deployment
