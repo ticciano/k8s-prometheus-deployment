@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: prometheus-volume-claim
+  name: prometheus-pv-claim
 spec:
   namespace: monitoring
   accessModes:
@@ -12,7 +12,7 @@ spec:
     requests:
       storage: 10Gi
   volumeMode: Filesystem
-  volumeName: prometheus
+  volumeName: prometheus-pv
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -56,7 +56,7 @@ spec:
               path: alerts.yml
         - name: prometheus-data
           persistentVolumeClaim:
-            claimName: prometheus-volume-claim
+            claimName: prometheus-pv-claim
 ---
 apiVersion: v1
 kind: Service
