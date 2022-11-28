@@ -4,6 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: prometheus-volume-claim
 spec:
+  namespace: monitoring
   accessModes:
     - ReadWriteOnce
   storageClassName: standard
@@ -16,6 +17,7 @@ kind: Deployment
 metadata:
   name: prometheus-deployment
 spec:
+  namespace: monitoring
   replicas: 1
   selector:
     matchLabels:
@@ -59,6 +61,7 @@ kind: Service
 metadata:
   name: prometheus-service
 spec:
+  namespace: monitoring
   type: NodePort
   selector:
     app: prometheus
