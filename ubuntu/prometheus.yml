@@ -28,3 +28,27 @@ scrape_configs:
 
     static_configs:
     - targets: ['localhost:9090']
+
+  - job_name: 'cevmkubernetes1'
+    static_configs:
+    - targets: ['10.7.1.86:9100']
+
+  - job_name: 'cevmkubernetes2'
+    static_configs:
+    - targets: ['10.7.1.87:9100']
+
+  - job_name: 'cevmkubernetes3'
+    static_configs:
+    - targets: ['10.7.1.88:9100']
+  
+  - job_name: 'cevmkubernetes-loadbalancer'
+    static_configs:
+    - targets: ['10.7.1.89:9100']
+  
+  - job_name: 'SEI-teste'
+    static_configs:
+    - targets: ['10.7.1.153:9100']
+  
+  - job_name: 'cevmdocker-hmg'
+    static_configs:
+    - targets: ['10.7.1.179:9100']
